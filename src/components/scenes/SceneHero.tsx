@@ -125,23 +125,27 @@ export default function SceneHero({ position }: { position: [number, number, num
       {/* Text — name */}
       <Text
         position={[0, -5, 0]}
-        fontSize={0.9}
+        fontSize={0.6}
         color="#ffffff"
         anchorX="center"
         anchorY="middle"
-        letterSpacing={0.15}
+        letterSpacing={0.12}
+        maxWidth={7}
+        textAlign="center"
       >
         GENE CARLO GALLARDO
       </Text>
       <Text
-        position={[0, -6.2, 0]}
-        fontSize={0.4}
+        position={[0, -6.0, 0]}
+        fontSize={0.28}
         color="#4facfe"
         anchorX="center"
         anchorY="middle"
-        letterSpacing={0.3}
+        letterSpacing={0.15}
+        maxWidth={7}
+        textAlign="center"
       >
-        APPLIED AI ENGINEER  ·  MELBOURNE
+        APPLIED AI ENGINEER · MELBOURNE
       </Text>
 
       {/* Orbital ring */}
