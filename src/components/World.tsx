@@ -23,14 +23,12 @@ export default function World() {
       <ambientLight intensity={0.3} />
       <pointLight position={[0, 20, 0]} intensity={1} color="#4facfe" />
       <Stars radius={300} depth={60} count={4000} factor={4} fade speed={0.5} />
-      <Suspense fallback={null}>
-        <SceneHero position={[0, 0, 0]} />
-        <SceneSkills position={[0, 0, -60]} />
-        <SceneProjects position={[0, 0, -120]} />
-        <SceneExperience position={[0, 0, -180]} />
-        <SceneWriting position={[0, 0, -240]} />
-        <SceneContact position={[0, 0, -300]} />
-      </Suspense>
+      <Suspense fallback={null}><SceneHero position={[0, 0, 0]} /></Suspense>
+      <Suspense fallback={null}><SceneSkills position={[0, 0, -60]} /></Suspense>
+      <Suspense fallback={null}><SceneProjects position={[0, 0, -120]} /></Suspense>
+      <Suspense fallback={null}><SceneExperience position={[0, 0, -180]} /></Suspense>
+      <Suspense fallback={null}><SceneWriting position={[0, 0, -240]} /></Suspense>
+      <Suspense fallback={null}><SceneContact position={[0, 0, -300]} /></Suspense>
       <CameraRig />
     </Canvas>
   );

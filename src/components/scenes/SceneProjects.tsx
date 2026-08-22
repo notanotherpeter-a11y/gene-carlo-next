@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Text, Float, MeshTransmissionMaterial } from '@react-three/drei';
+import { Text, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 const projects = [
@@ -26,22 +26,16 @@ function Monolith({ project, index }: { project: Project; index: number }) {
   return (
     <Float speed={0.8} floatIntensity={0.3} rotationIntensity={0.05}>
       <group position={[project.x, 0, project.z]}>
-        {/* Glass monolith */}
-        <mesh ref={meshRef} castShadow>
+        {/* Glass monolith — lightweight material, mobile safe */}
+        <mesh ref={meshRef}>
           <boxGeometry args={[2.5, 8, 0.4]} />
-          <MeshTransmissionMaterial
-            backside
-            samples={4}
-            thickness={0.5}
-            roughness={0.05}
-            chromaticAberration={0.1}
-            anisotropy={0.1}
-            distortion={0.1}
-            distortionScale={0.1}
-            temporalDistortion={0.2}
+          <meshPhysicalMaterial
             color={project.color}
-            attenuationColor={project.color}
-            attenuationDistance={0.5}
+            transparent
+            opacity={0.12}
+            roughness={0.05}
+            metalness={0.1}
+            side={THREE.DoubleSide}
           />
         </mesh>
         {/* Edge glow */}

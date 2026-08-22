@@ -129,7 +129,6 @@ export default function SceneHero({ position }: { position: [number, number, num
         color="#ffffff"
         anchorX="center"
         anchorY="middle"
-        font="/fonts/GeistMono-Bold.otf"
         letterSpacing={0.15}
       >
         GENE CARLO GALLARDO
