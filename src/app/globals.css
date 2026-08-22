@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
 :root {
   --bg-primary: #0D1117;
   --bg-secondary: #161B22;
