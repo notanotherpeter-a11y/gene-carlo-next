@@ -1,22 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -2 124 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
   <defs>
-    <linearGradient id="metalGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#5C3D00"/>
-      <stop offset="15%"  stop-color="#B8760A"/>
-      <stop offset="35%"  stop-color="#F0C040"/>
-      <stop offset="50%"  stop-color="#FAD860"/>
-      <stop offset="65%"  stop-color="#D4950E"/>
-      <stop offset="82%"  stop-color="#9A6A08"/>
+    <!-- Gold gradient for hex ring -->
+    <linearGradient id="goldHex" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%"   stop-color="#3D2800"/>
+      <stop offset="15%"  stop-color="#A06C08"/>
+      <stop offset="32%"  stop-color="#E8B840"/>
+      <stop offset="48%"  stop-color="#FAE070"/>
+      <stop offset="62%"  stop-color="#D49010"/>
+      <stop offset="78%"  stop-color="#8B5E06"/>
       <stop offset="100%" stop-color="#C8870A"/>
     </linearGradient>
+    <!-- Gold gradient for S — slightly different angle for 3D feel -->
+    <linearGradient id="goldS" x1="90%" y1="5%" x2="10%" y2="95%">
+      <stop offset="0%"   stop-color="#5C3D00"/>
+      <stop offset="18%"  stop-color="#B87808"/>
+      <stop offset="38%"  stop-color="#F5D055"/>
+      <stop offset="52%"  stop-color="#FDE880"/>
+      <stop offset="68%"  stop-color="#C8900C"/>
+      <stop offset="84%"  stop-color="#9A6408"/>
+      <stop offset="100%" stop-color="#D4950E"/>
+    </linearGradient>
+    <!-- Subtle inner shadow / depth filter -->
+    <filter id="depth" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
   </defs>
+
+  <!-- ── Hexagon ring (outer hex minus inner hex, even-odd) ── -->
+  <!-- Outer R=49, Inner R=38, center (50,56) -->
+  <path
+    fill-rule="evenodd"
+    fill="url(#goldHex)"
+    filter="url(#depth)"
+    d="
+      M 99,56 L 74.5,98.5 L 25.5,98.5 L 1,56 L 25.5,13.5 L 74.5,13.5 Z
+      M 88,56 L 69,88.9 L 31,88.9 L 12,56 L 31,23.1 L 69,23.1 Z
+    "
+  />
+
+  <!-- ── S shape inside (thick polyline) ── -->
+  <!-- Top bar: (28,36)→(72,36), diagonal to mid-right (79,56), mid bar (21,56), diagonal to bot-left (28,76), bot bar (72,76) -->
   <polyline
-    points="10,10 90,10 98,56 2,56 10,102 90,102"
+    points="28,36 72,36 79,56 21,56 28,76 72,76"
     fill="none"
-    stroke="url(#metalGold)"
-    stroke-width="18"
+    stroke="url(#goldS)"
+    stroke-width="13"
     stroke-linecap="square"
     stroke-linejoin="miter"
-    stroke-miterlimit="20"
+    stroke-miterlimit="25"
+    filter="url(#depth)"
   />
 </svg>
