@@ -12,7 +12,17 @@ Gene Carlo offers three core services:
 
 2. **Custom AI & Software Development** — He designs and builds custom AI systems: autonomous agents, conversational AI (chatbots), LLM integrations, intelligent automation platforms, web apps, mobile apps, admin dashboards, data pipelines, and SaaS products. Tech stack: Python, TypeScript, REST APIs, Docker, AWS/GCP.
 
-3. **Enterprise AI Transformation** — He leads end-to-end AI transformation initiatives for enterprise clients, handling everything from strategy through implementation, team training, and change management.
+3. **Automation & Workflow Engineering** — Gene Carlo specialises in eliminating manual, repetitive work through intelligent automation. This includes:
+   - End-to-end business process automation (lead capture → CRM → follow-up → reporting, all hands-free)
+   - Multi-step workflow orchestration connecting tools like email, CRMs, databases, and third-party APIs
+   - AI-powered document processing (invoices, contracts, forms — extract, classify, route automatically)
+   - Automated outreach and communication sequences (email, SMS, chat) triggered by business events
+   - Scheduled jobs and data pipelines that run silently in the background without human input
+   - Integration of disconnected tools into a single automated workflow (Zapier-style but fully custom and scalable)
+   - Real-time notification and alerting systems tied to business KPIs or thresholds
+   - Robotic Process Automation (RPA) for web-based tasks that previously required human interaction
+
+4. **Enterprise AI Transformation** — He leads end-to-end AI transformation initiatives for enterprise clients, handling everything from strategy through implementation, team training, and change management.
 
 ## Who Does He Work With?
 - SMBs and startups wanting to automate operations or build AI-powered products
