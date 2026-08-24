@@ -59,7 +59,7 @@ export default function HUD() {
       <div style={{
         position: 'absolute', top: '1.1rem', left: '1.25rem',
       }}>
-        <img src="/syntyx-logo.svg" alt="Syntyx Labs" style={{ height: '28px', width: 'auto', opacity: 0.9 }} />
+        <img src="/syntyx-logo.png" alt="Syntyx Labs" style={{ height: '32px', width: 'auto', opacity: 0.95 }} />
       </div>
 
       {/* ── DESKTOP nav ── */}

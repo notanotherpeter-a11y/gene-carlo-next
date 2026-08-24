@@ -50,9 +50,9 @@ export default function Nav() {
           style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}
         >
           <img
-            src="/syntyx-logo.svg"
+            src="/syntyx-logo.png"
             alt="Syntyx Labs"
-            style={{ height: '30px', width: 'auto' }}
+            style={{ height: '34px', width: 'auto' }}
           />
           <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '0.02em' }}>
             Gene Carlo Gallardo
