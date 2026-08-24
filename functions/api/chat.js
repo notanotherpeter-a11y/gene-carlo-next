@@ -78,13 +78,23 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({ error: 'API key not configured' }), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
 
-    // Build Gemini history (all but last message)
-    const history = messages.slice(0, -1).map(m => ({
+    const lastMessage = messages[messages.length - 1];
+
+    // Build Gemini history — must start with user and strictly alternate user/model
+    // Skip any leading assistant messages, then ensure alternation
+    const rawHistory = messages.slice(0, -1).map(m => ({
       role: m.role === 'assistant' ? 'model' : 'user',
       parts: [{ text: m.content }],
     }));
 
-    const lastMessage = messages[messages.length - 1];
+    // Ensure strict alternation: drop leading model turns, then deduplicate consecutive same-role
+    const history = [];
+    for (const turn of rawHistory) {
+      if (history.length === 0 && turn.role === 'model') continue; // skip leading model turns
+      const last = history[history.length - 1];
+      if (last && last.role === turn.role) continue; // skip consecutive same-role
+      history.push(turn);
+    }
 
     const body = {
       system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
@@ -92,7 +102,7 @@ export async function onRequestPost(context) {
         ...history,
         { role: 'user', parts: [{ text: lastMessage.content }] },
       ],
-      generationConfig: { maxOutputTokens: 512 },
+      generationConfig: { maxOutputTokens: 768 },
     };
 
     const res = await fetch(

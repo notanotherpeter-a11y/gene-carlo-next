@@ -2,6 +2,51 @@
 
 import { useState, useRef, useEffect } from 'react';
 
+// Simple markdown renderer: bold, italic, numbered lists, bullet lists
+function renderMarkdown(text: string) {
+  const lines = text.split('\n');
+  const elements: React.ReactNode[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (/^\d+\.\s/.test(line)) {
+      // Numbered list
+      const items: string[] = [];
+      while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+        items.push(lines[i].replace(/^\d+\.\s/, ''));
+        i++;
+      }
+      elements.push(<ol key={i} style={{ margin: '0.4rem 0', paddingLeft: '1.2rem' }}>{items.map((it, j) => <li key={j}>{inlineMarkdown(it)}</li>)}</ol>);
+      continue;
+    }
+    if (/^[-*]\s/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^[-*]\s/.test(lines[i])) {
+        items.push(lines[i].replace(/^[-*]\s/, ''));
+        i++;
+      }
+      elements.push(<ul key={i} style={{ margin: '0.4rem 0', paddingLeft: '1.2rem' }}>{items.map((it, j) => <li key={j}>{inlineMarkdown(it)}</li>)}</ul>);
+      continue;
+    }
+    if (line.trim() === '') {
+      elements.push(<br key={i} />);
+    } else {
+      elements.push(<p key={i} style={{ margin: '0.2rem 0' }}>{inlineMarkdown(line)}</p>);
+    }
+    i++;
+  }
+  return elements;
+}
+
+function inlineMarkdown(text: string): React.ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) return <strong key={i}>{part.slice(2, -2)}</strong>;
+    if (part.startsWith('*') && part.endsWith('*')) return <em key={i}>{part.slice(1, -1)}</em>;
+    return part;
+  });
+}
+
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -130,7 +175,7 @@ export default function ChatWidget() {
                     border: m.role === 'assistant' ? '1px solid var(--border)' : 'none',
                   }}
                 >
-                  {m.content}
+                  {m.role === 'assistant' ? renderMarkdown(m.content) : m.content}
                 </div>
               </div>
             ))}
