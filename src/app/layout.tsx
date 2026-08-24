@@ -21,6 +21,69 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Gene Carlo Gallardo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gene Carlo Gallardo is an Applied AI Engineer and Enterprise AI Strategist based in Melbourne, Australia. He is the founder of Syntyx Labs Pty Ltd, with 15+ years of experience building AI-powered systems across logistics, healthcare, finance, and real estate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Gene Carlo Gallardo do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gene Carlo builds AI-powered systems including autonomous agents, conversational AI, LLM integrations, enterprise automation platforms, and full-stack web and mobile applications. He also provides AI strategy consulting and enterprise transformation services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Gene Carlo Gallardo based?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gene Carlo Gallardo is based in Melbourne, Victoria, Australia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Syntyx Labs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Syntyx Labs Pty Ltd is Gene Carlo Gallardo's AI SaaS product studio based in Melbourne, Australia. It builds AI tools, automation platforms, and intelligent systems for small and medium businesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I hire Gene Carlo Gallardo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact Gene Carlo at genecarloai@gmail.com or via the contact form at gene-carlo.com. He is open to AI strategy consulting, automation projects, and custom software development engagements, and responds within 24 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI services does Gene Carlo offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gene Carlo offers AI Strategy Development, Enterprise AI Architecture, LLM Integration, Agent Orchestration, Conversational AI, AI Copilot Development, Business Process Automation, and Digital Transformation consulting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What programming languages does Gene Carlo use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gene Carlo works primarily with Python and TypeScript, and has extensive experience with React, Next.js, REST APIs, Docker, AWS, and GCP."
+      }
+    }
+  ]
+};
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -68,6 +131,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body style={{ margin: 0, background: '#020408', overflow: 'hidden auto' }}>
