@@ -66,7 +66,7 @@ export default function Contact() {
           {/* Contact info */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {[
-              { label: 'Email', value: 'genecarlogallardo@gmail.com', href: 'mailto:genecarlogallardo@gmail.com' },
+              { label: 'Email', value: 'genecarloai@gmail.com', href: 'mailto:genecarloai@gmail.com' },
               { label: 'Phone', value: '0420 418 888', href: 'tel:+61420418888' },
               { label: 'Location', value: 'Melbourne, VIC, Australia', href: null },
             ].map((item) => (
