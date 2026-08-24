@@ -1,0 +1,80 @@
+# Gene Carlo Gallardo — Applied AI Engineer
+
+> Applied AI Engineer, Enterprise AI Strategist, and Founder of Syntyx Labs Pty Ltd. Based in Melbourne, Victoria, Australia.
+
+## Who Is Gene Carlo Gallardo?
+
+Gene Carlo Gallardo is an Applied AI Engineer and Enterprise AI Strategist with 15+ years of cross-domain experience spanning logistics, healthcare, finance, and real estate. He is the founder of **Syntyx Labs Pty Ltd** — an AI SaaS product studio building intelligent automation systems for small and medium businesses in Australia.
+
+Gene Carlo architects AI transformation initiatives that bridge technical innovation with measurable business value. He is fluent in English and Filipino and works with clients across Australia and internationally.
+
+## What He Does
+
+Gene Carlo specialises in:
+
+- **AI Strategy & Enterprise Transformation** — Designing and implementing organisation-wide AI adoption roadmaps
+- **LLM Integration & Agent Orchestration** — Building autonomous AI agents that handle real business workflows
+- **Conversational AI & Copilots** — Custom AI assistants for customer service, sales, and internal ops
+- **Full Stack Software Development** — Python, TypeScript, mobile apps, web apps, REST APIs, Docker, AWS/GCP
+- **Data Pipelines & Automation** — Automated lead generation, document parsing, business intelligence
+- **AI Business Case Development** — ROI measurement, stakeholder alignment, change management
+
+## Syntyx Labs Pty Ltd
+
+**Syntyx Labs** is Gene Carlo's AI product studio based in Melbourne, Australia. It builds, tests, and delivers AI-powered tools and automation platforms for SMBs. Services include custom AI development, enterprise AI consulting, and SaaS product creation.
+
+- Website: https://syntyxlabs.com
+- Email: genecarloai@gmail.com
+- Phone: 0420 418 888
+
+## Selected Projects
+
+1. **Enterprise AI Transformation Platform** — Led AI transformation for 5+ businesses simultaneously, deploying autonomous agents for customer service, lead generation, and business intelligence.
+
+2. **3000 Auto Spa: On-Demand Service Marketplace** — Complete mobile detailing platform with customer/provider matching, real-time routing, and centralised admin dashboard.
+
+3. **Autonomous AI Customer Service Agent** — Intelligent agent handling inbound enquiries, appointment booking, and follow-up communications across multiple business contexts.
+
+4. **Tax and Invoice Management System** — Smart financial platform for small business invoicing, GST tracking, and automated reporting with document parsing.
+
+5. **Lead Generation and Directory Engine** — Automated pipeline that harvests structured business intelligence from public directories at scale with CRM-ready output.
+
+6. **Syntyx Labs AI SaaS Studio** — Ongoing AI product development studio serving SMBs across Australia.
+
+## Skills & Technologies
+
+**AI/ML:** AI Strategy, LLM Integration, Agent Orchestration, Conversational AI, AI Copilot Development, AI ROI Measurement, AI Governance
+
+**Development:** Python, TypeScript, React, Next.js, REST APIs, Mobile App Development, UI/UX Design, Docker, AWS, GCP
+
+**Leadership:** Digital Transformation Strategy, Enterprise Architecture, Stakeholder Management, Change Management, Business Intelligence
+
+## Contact & Links
+
+- **Website:** https://gene-carlo.com
+- **Email:** genecarloai@gmail.com
+- **Phone:** 0420 418 888 (Melbourne, Australia, AEST)
+- **LinkedIn:** https://linkedin.com/in/gene-carlo-gallardo
+- **Company:** https://syntyxlabs.com
+- **CV/Resume:** https://gene-carlo.com/cv.pdf
+
+## Availability
+
+Open to AI strategy consulting, automation projects, custom software development, and enterprise AI transformation engagements. Responds within 24 hours.
+
+## Frequently Asked Questions
+
+**Who is Gene Carlo Gallardo?**
+Gene Carlo Gallardo is an Applied AI Engineer and founder of Syntyx Labs Pty Ltd based in Melbourne, Australia, specialising in AI strategy, LLM integration, and enterprise automation.
+
+**What does Gene Carlo build?**
+Gene Carlo builds AI-powered systems including autonomous agents, conversational AI, enterprise automation platforms, and full-stack web and mobile applications.
+
+**Where is Gene Carlo based?**
+Melbourne, Victoria, Australia.
+
+**How can I hire Gene Carlo Gallardo?**
+Contact via genecarloai@gmail.com or through the contact form at gene-carlo.com. Open to project-based and consulting engagements.
+
+**What is Syntyx Labs?**
+Syntyx Labs Pty Ltd is Gene Carlo's AI SaaS product studio in Melbourne, Australia, building AI tools and automation platforms for small and medium businesses.
