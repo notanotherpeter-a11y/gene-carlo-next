@@ -47,9 +47,16 @@ export default function Nav() {
       >
         <a
           href="#hero"
-          style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}
         >
-          Gene Carlo Gallardo
+          <img
+            src="/syntyx-logo.svg"
+            alt="Syntyx Labs"
+            style={{ height: '30px', width: 'auto' }}
+          />
+          <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '0.02em' }}>
+            Gene Carlo Gallardo
+          </span>
         </a>
 
         {/* Desktop menu */}

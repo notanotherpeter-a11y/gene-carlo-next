@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -2 124 128">
+  <defs>
+    <linearGradient id="metalGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#5C3D00"/>
+      <stop offset="15%"  stop-color="#B8760A"/>
+      <stop offset="35%"  stop-color="#F0C040"/>
+      <stop offset="50%"  stop-color="#FAD860"/>
+      <stop offset="65%"  stop-color="#D4950E"/>
+      <stop offset="82%"  stop-color="#9A6A08"/>
+      <stop offset="100%" stop-color="#C8870A"/>
+    </linearGradient>
+  </defs>
+  <polyline
+    points="10,10 90,10 98,56 2,56 10,102 90,102"
+    fill="none"
+    stroke="url(#metalGold)"
+    stroke-width="18"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    stroke-miterlimit="20"
+  />
+</svg>

@@ -57,11 +57,9 @@ export default function HUD() {
 
       {/* Top left — logo */}
       <div style={{
-        position: 'absolute', top: '1.25rem', left: '1.25rem',
-        ...mono, fontSize: '0.65rem',
-        color: 'rgba(255,255,255,0.5)',
+        position: 'absolute', top: '1.1rem', left: '1.25rem',
       }}>
-        GCG · APPLIED AI
+        <img src="/syntyx-logo.svg" alt="Syntyx Labs" style={{ height: '28px', width: 'auto', opacity: 0.9 }} />
       </div>
 
       {/* ── DESKTOP nav ── */}
