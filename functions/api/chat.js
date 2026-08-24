@@ -96,7 +96,7 @@ export async function onRequestPost(context) {
     };
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -105,12 +105,24 @@ export async function onRequestPost(context) {
     );
 
     const data = await res.json();
+
+    // Surface API errors clearly
+    if (!res.ok || data?.error) {
+      const errMsg = data?.error?.message || `HTTP ${res.status}`;
+      console.error('Gemini API error:', errMsg, JSON.stringify(data));
+      return new Response(JSON.stringify({ error: `Gemini error: ${errMsg}` }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
     const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.';
 
     return new Response(JSON.stringify({ reply }), {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
+    console.error('Chat function error:', err);
     return new Response(JSON.stringify({ error: 'Something went wrong. Please try again.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },

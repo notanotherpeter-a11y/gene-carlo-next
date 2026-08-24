@@ -47,7 +47,7 @@ export default function ChatWidget() {
         body: JSON.stringify({ messages: next.map(m => ({ role: m.role, content: m.content })) }),
       });
       const data = await res.json();
-      setMessages(prev => [...prev, { role: 'assistant', content: data.reply || data.error || 'Sorry, something went wrong.' }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: data.reply || data.error || `Error ${res.status}: no reply` }]);
     } catch {
       setMessages(prev => [...prev, { role: 'assistant', content: 'Connection error. Please try again.' }]);
     } finally {
