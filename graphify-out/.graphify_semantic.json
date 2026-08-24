@@ -1,0 +1,655 @@
+{
+  "nodes": [
+    {
+      "id": "_github_workflows_deploy_deploy_to_cloudflare_pages",
+      "label": "Deploy to Cloudflare Pages Workflow",
+      "file_type": "document",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_github_workflows_deploy_build_deploy_job",
+      "label": "Build & Deploy Job",
+      "file_type": "document",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_github_workflows_deploy_cloudflare_pages",
+      "label": "Cloudflare Pages",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 29",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_github_workflows_deploy_wrangler",
+      "label": "Wrangler CLI",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 33",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_github_workflows_deploy_npm_ci",
+      "label": "npm ci (Install Dependencies)",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 24",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_github_workflows_deploy_npm_run_build",
+      "label": "npm run build",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 27",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_md_nextjs_agent_rules",
+      "label": "Next.js Agent Rules",
+      "file_type": "rationale",
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_md_nextjs_breaking_changes",
+      "label": "Next.js Breaking Changes Warning",
+      "file_type": "rationale",
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": "line 5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_md_generate_agent_files",
+      "label": "generate-agent-files.js (Next.js internal)",
+      "file_type": "code",
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": "line 7",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_gene_carlo_next",
+      "label": "Gene Carlo Next.js Project",
+      "file_type": "document",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_nextjs_framework",
+      "label": "Next.js Framework",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_create_next_app",
+      "label": "create-next-app CLI",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_app_page_tsx",
+      "label": "app/page.tsx (Entry Page)",
+      "file_type": "code",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 19",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_geist_font",
+      "label": "Geist Font (next/font)",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 21",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_vercel_platform",
+      "label": "Vercel Platform",
+      "file_type": "concept",
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 33",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "claude_md_agents_md_ref",
+      "label": "CLAUDE.md → AGENTS.md Reference",
+      "file_type": "document",
+      "source_file": "/Users/king/Projects/gene-carlo-next/CLAUDE.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_assets_gene_portrait_jpg",
+      "label": "gene-portrait.jpg (Portrait Photo Asset)",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_assets_gene_portrait_subject",
+      "label": "Gene Carlo (Portrait Subject)",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_assets_gene_portrait_style",
+      "label": "Professional Headshot Style",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_assets_gene_portrait_context",
+      "label": "Portfolio / Personal Website Asset",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_assets_gene_portrait_lighting",
+      "label": "Dark Studio Lighting (Low-Key)",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_file_svg_file_icon",
+      "label": "File Document Icon",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/file.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_globe_svg_globe_icon",
+      "label": "Globe / World Wide Web Icon",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/globe.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_next_svg_nextjs_logo",
+      "label": "Next.js Wordmark Logo",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/next.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_vercel_svg_vercel_logo",
+      "label": "Vercel Triangle Logo",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/vercel.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "public_window_svg_window_icon",
+      "label": "Browser Window / Desktop UI Icon",
+      "file_type": "image",
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/window.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "_github_workflows_deploy_deploy_to_cloudflare_pages",
+      "target": "_github_workflows_deploy_build_deploy_job",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 9",
+      "weight": 1.0
+    },
+    {
+      "source": "_github_workflows_deploy_build_deploy_job",
+      "target": "_github_workflows_deploy_npm_ci",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 24",
+      "weight": 1.0
+    },
+    {
+      "source": "_github_workflows_deploy_build_deploy_job",
+      "target": "_github_workflows_deploy_npm_run_build",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 27",
+      "weight": 1.0
+    },
+    {
+      "source": "_github_workflows_deploy_build_deploy_job",
+      "target": "_github_workflows_deploy_wrangler",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 33",
+      "weight": 1.0
+    },
+    {
+      "source": "_github_workflows_deploy_wrangler",
+      "target": "_github_workflows_deploy_cloudflare_pages",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": "line 33",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_md_nextjs_agent_rules",
+      "target": "agents_md_nextjs_breaking_changes",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": "line 5",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_md_nextjs_agent_rules",
+      "target": "agents_md_generate_agent_files",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": "line 7",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_md_agents_md_ref",
+      "target": "agents_md_nextjs_agent_rules",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/CLAUDE.md",
+      "source_location": "line 1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_gene_carlo_next",
+      "target": "readme_nextjs_framework",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_gene_carlo_next",
+      "target": "readme_create_next_app",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_gene_carlo_next",
+      "target": "readme_app_page_tsx",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 19",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_gene_carlo_next",
+      "target": "readme_geist_font",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 21",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_gene_carlo_next",
+      "target": "readme_vercel_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": "line 33",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_vercel_platform",
+      "target": "_github_workflows_deploy_cloudflare_pages",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "readme_nextjs_framework",
+      "target": "agents_md_nextjs_breaking_changes",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "_github_workflows_deploy_npm_run_build",
+      "target": "readme_gene_carlo_next",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "public_assets_gene_portrait_jpg",
+      "target": "public_assets_gene_portrait_subject",
+      "relation": "depicts",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_assets_gene_portrait_jpg",
+      "target": "public_assets_gene_portrait_style",
+      "relation": "exemplifies",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_assets_gene_portrait_jpg",
+      "target": "public_assets_gene_portrait_context",
+      "relation": "used_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_assets_gene_portrait_jpg",
+      "target": "public_assets_gene_portrait_lighting",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_assets_gene_portrait_subject",
+      "target": "public_assets_gene_portrait_context",
+      "relation": "represented_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_assets_gene_portrait_style",
+      "target": "public_assets_gene_portrait_lighting",
+      "relation": "achieved_via",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/assets/gene-portrait.jpg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_next_svg_nextjs_logo",
+      "target": "public_vercel_svg_vercel_logo",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/next.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_vercel_svg_vercel_logo",
+      "target": "public_next_svg_nextjs_logo",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/vercel.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_file_svg_file_icon",
+      "target": "public_window_svg_window_icon",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/file.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_globe_svg_globe_icon",
+      "target": "public_window_svg_window_icon",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/globe.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_file_svg_file_icon",
+      "target": "public_globe_svg_globe_icon",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/file.svg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "public_next_svg_nextjs_logo",
+      "target": "public_window_svg_window_icon",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/next.svg",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "ci_cd_deployment_pipeline",
+      "label": "CI/CD Deployment Pipeline: Build, Wrangler, Cloudflare Pages",
+      "nodes": [
+        "_github_workflows_deploy_build_deploy_job",
+        "_github_workflows_deploy_wrangler",
+        "_github_workflows_deploy_cloudflare_pages"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/.github/workflows/deploy.yml"
+    },
+    {
+      "id": "nextjs_project_bootstrap",
+      "label": "Next.js Project Bootstrap: Framework, create-next-app, app/page.tsx",
+      "nodes": [
+        "readme_nextjs_framework",
+        "readme_create_next_app",
+        "readme_app_page_tsx"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/README.md"
+    },
+    {
+      "id": "agent_rules_context",
+      "label": "Agent Instructions Context: CLAUDE.md, AGENTS.md, Next.js Breaking Changes",
+      "nodes": [
+        "claude_md_agents_md_ref",
+        "agents_md_nextjs_agent_rules",
+        "agents_md_nextjs_breaking_changes"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/king/Projects/gene-carlo-next/AGENTS.md"
+    },
+    {
+      "id": "nextjs_default_public_icons",
+      "label": "Next.js Default Public Directory Icons",
+      "nodes": [
+        "public_file_svg_file_icon",
+        "public_globe_svg_globe_icon",
+        "public_next_svg_nextjs_logo",
+        "public_vercel_svg_vercel_logo",
+        "public_window_svg_window_icon"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/file.svg"
+    },
+    {
+      "id": "ui_utility_icons",
+      "label": "UI Utility / Decorative Icons (non-brand)",
+      "nodes": [
+        "public_file_svg_file_icon",
+        "public_globe_svg_globe_icon",
+        "public_window_svg_window_icon"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/file.svg"
+    },
+    {
+      "id": "vercel_nextjs_brand_assets",
+      "label": "Vercel / Next.js Brand Assets",
+      "nodes": [
+        "public_next_svg_nextjs_logo",
+        "public_vercel_svg_vercel_logo"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "/Users/king/Projects/gene-carlo-next/public/next.svg"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
