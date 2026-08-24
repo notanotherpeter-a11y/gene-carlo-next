@@ -50,7 +50,7 @@ export default function Nav() {
           style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}
         >
           <img
-            src="/syntyx-logo.svg"
+            src="/syntyx-logo.png"
             alt="Syntyx Labs"
             style={{ height: '36px', width: 'auto' }}
           />
