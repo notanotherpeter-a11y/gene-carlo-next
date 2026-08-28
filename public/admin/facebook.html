@@ -144,6 +144,7 @@
     <a class="nav-item active" href="facebook.html"><span class="nav-icon">👍</span> Facebook</a>
     <a class="nav-item" href="instagram.html"><span class="nav-icon">📷</span> Instagram</a>
     <div class="sidebar-bottom">
+      <a href="#" onclick="doLogout()">🔓 Sign Out</a>
       <a href="../index.html">← Back to site</a>
       <a href="https://gene-carlo.com" target="_blank">gene-carlo.com ↗</a>
     </div>
@@ -326,6 +327,7 @@ refreshData();
 </script>
 <script>
 if (sessionStorage.getItem("gc_admin_auth") !== "1") { window.location.href = "login.html"; }
+function doLogout() { sessionStorage.removeItem("gc_admin_auth"); window.location.href = "login.html"; }
 </script>
 </body>
 </html>
