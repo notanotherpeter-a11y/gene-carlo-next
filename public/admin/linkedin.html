@@ -80,7 +80,7 @@
     .banner-icon { font-size: 1.1rem; flex-shrink: 0; }
 
     /* KPI cards */
-    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
     .kpi-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -188,6 +188,7 @@
       .hamburger { display: flex; }
       .main { padding: 1.25rem; padding-top: 4rem; }
       .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      #token-countdown-card { grid-column: span 2; }
       .platform-grid { grid-template-columns: 1fr; }
       .page-title { font-size: 1.35rem; }
       table { font-size: 0.78rem; }
@@ -242,6 +243,11 @@
         <div class="kpi-label">Failed</div>
         <div class="kpi-value" id="kpi-failed">—</div>
         <div class="kpi-sub">Needs attention</div>
+      </div>
+      <div class="kpi-card blue" id="token-countdown-card">
+        <div class="kpi-label">Token Expires</div>
+        <div class="kpi-value" id="kpi-countdown" style="font-size:1.4rem;letter-spacing:-0.02em">—</div>
+        <div class="kpi-sub" id="kpi-countdown-sub">Renew before Oct 28</div>
       </div>
       <div class="kpi-card blue">
         <div class="kpi-label">This Month</div>
@@ -325,20 +331,57 @@ let allPosts = [];
 let calYear = new Date().getFullYear();
 let calMonth = new Date().getMonth();
 
-// Token expiry banner
-(function checkTokenExpiry() {
-  const now = new Date();
-  const daysLeft = Math.ceil((TOKEN_EXPIRY - now) / (1000 * 60 * 60 * 24));
-  const banner = document.getElementById('token-banner');
-  if (daysLeft < 3) {
-    banner.className = 'banner danger';
-    banner.innerHTML = `<span class="banner-icon">🔴</span><strong>LinkedIn token expires in ${daysLeft} day${daysLeft !== 1 ? 's' : ''}</strong> — renew immediately or posting will stop on ${TOKEN_EXPIRY.toDateString()}.`;
-    banner.style.display = 'flex';
-  } else if (daysLeft < 14) {
-    banner.className = 'banner warning';
-    banner.innerHTML = `<span class="banner-icon">⚠️</span><strong>LinkedIn token expires in ${daysLeft} days</strong> — renew before ${TOKEN_EXPIRY.toDateString()}.`;
-    banner.style.display = 'flex';
+// Token expiry banner + countdown
+(function initTokenCountdown() {
+  function tick() {
+    const now = new Date();
+    const diff = TOKEN_EXPIRY - now;
+    const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+    // Banner
+    const banner = document.getElementById('token-banner');
+    if (daysLeft < 3) {
+      banner.className = 'banner danger';
+      banner.innerHTML = `<span class="banner-icon">🔴</span><strong>Token expires in ${daysLeft} day${daysLeft !== 1 ? 's' : ''}</strong> — renew immediately!`;
+      banner.style.display = 'flex';
+    } else if (daysLeft < 14) {
+      banner.className = 'banner warning';
+      banner.innerHTML = `<span class="banner-icon">⚠️</span><strong>Token expires in ${daysLeft} days</strong> — renew before Oct 28.`;
+      banner.style.display = 'flex';
+    }
+
+    // Countdown card
+    const card = document.getElementById('token-countdown-card');
+    const countEl = document.getElementById('kpi-countdown');
+    const subEl = document.getElementById('kpi-countdown-sub');
+
+    if (diff <= 0) {
+      countEl.textContent = 'EXPIRED';
+      card.className = 'kpi-card red';
+      subEl.textContent = 'Renew now — posting stopped';
+      return;
+    }
+
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const s = Math.floor((diff % (1000*60)) / 1000);
+
+    countEl.textContent = `${d}d ${String(h).padStart(2,'0')}h ${String(m).padStart(2,'0')}m`;
+    subEl.textContent = `${String(s).padStart(2,'0')}s · Renew before Oct 28`;
+
+    // Color shift as it gets close
+    if (d < 3) {
+      card.className = 'kpi-card red';
+    } else if (d < 14) {
+      card.className = 'kpi-card yellow';
+    } else {
+      card.className = 'kpi-card blue';
+    }
   }
+
+  tick();
+  setInterval(tick, 1000);
 })();
 
 async function fetchPosts() {
