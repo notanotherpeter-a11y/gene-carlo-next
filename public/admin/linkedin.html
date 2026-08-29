@@ -159,6 +159,10 @@
     .date-cell { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
     .slot-badge { font-family: 'Fira Code', monospace; font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 4px; background: rgba(168,85,247,0.15); color: #d8b4fe; }
     .img-check { color: var(--green); }
+    .stats-cell { font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text-secondary); white-space: nowrap; }
+    .stats-cell span { margin-right: 0.6rem; }
+    .stats-loading { color: var(--text-muted); font-family: 'Fira Code', monospace; font-size: 0.68rem; }
+    .stats-error { color: var(--text-muted); font-family: 'Fira Code', monospace; font-size: 0.68rem; }
 
     /* Loading */
     .loading { text-align: center; padding: 3rem; color: var(--text-muted); font-family: 'Fira Code', monospace; font-size: 0.8rem; }
@@ -304,10 +308,11 @@
             <th>Scheduled Date</th>
             <th>Posted At</th>
             <th>Image</th>
+            <th>Stats</th>
           </tr>
         </thead>
         <tbody id="posts-tbody">
-          <tr><td colspan="7" class="loading"><span class="dot-pulse">Loading posts</span></td></tr>
+          <tr><td colspan="8" class="loading"><span class="dot-pulse">Loading posts</span></td></tr>
         </tbody>
       </table>
       </div>
@@ -418,7 +423,7 @@ function renderCalendar(posts) {
 function renderTable(posts) {
   const tbody = document.getElementById('posts-tbody');
   if (!posts.length) {
-    tbody.innerHTML = '<tr><td colspan="7" class="loading">No posts found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="loading">No posts found</td></tr>';
     return;
   }
   tbody.innerHTML = posts.map(p => {
@@ -427,20 +432,47 @@ function renderTable(posts) {
     const postedAt = p.posted_at ? new Date(p.posted_at).toLocaleDateString('en-AU', {day:'numeric',month:'short',year:'numeric'}) : '—';
     const hasImg   = p.image_url ? `<span class="img-check" title="${p.image_url}">✓</span>` : '<span style="color:var(--text-muted)">—</span>';
     const slot     = p.post_slot ? `<span class="slot-badge">${p.post_slot}</span>` : '—';
+    const statsCell = p.status === 'posted' && p.linkedin_urn
+      ? `<td class="stats-cell" id="stats-${p.id}"><span class="stats-loading">…</span></td>`
+      : `<td class="stats-cell" style="color:var(--text-muted)">—</td>`;
     return `<tr>
       <td class="date-cell">${p.num ?? '—'}</td>
-      <td style="max-width:300px"><span title="${(p.content||'').substring(0,200)}">${title}${(p.title||p.content||'').length > 80 ? '…' : ''}</span></td>
+      <td style="max-width:280px"><span title="${(p.content||'').substring(0,200)}">${title}${(p.title||p.content||'').length > 80 ? '…' : ''}</span></td>
       <td>${slot}</td>
       <td><span class="badge ${p.status}">${p.status}</span></td>
       <td class="date-cell">${schDate}</td>
       <td class="date-cell">${postedAt}</td>
       <td>${hasImg}</td>
+      ${statsCell}
     </tr>`;
   }).join('');
+
+  // Fetch stats for posted posts (batch with small delay to avoid rate limits)
+  const postedWithUrn = posts.filter(p => p.status === 'posted' && p.linkedin_urn);
+  postedWithUrn.forEach((p, i) => {
+    setTimeout(() => fetchStats(p.id, p.linkedin_urn), i * 300);
+  });
+}
+
+async function fetchStats(postId, urn) {
+  const el = document.getElementById(`stats-${postId}`);
+  if (!el) return;
+  try {
+    const res = await fetch(`${WORKER_URL}/metrics?urn=${encodeURIComponent(urn)}`);
+    if (!res.ok) { el.innerHTML = '<span class="stats-error">—</span>'; return; }
+    const d = await res.json();
+    if (d.error) { el.innerHTML = '<span class="stats-error">—</span>'; return; }
+    el.innerHTML =
+      `<span title="Likes">❤️ ${d.likes ?? 0}</span>` +
+      `<span title="Comments">💬 ${d.comments ?? 0}</span>` +
+      (d.reposts > 0 ? `<span title="Reposts">🔁 ${d.reposts}</span>` : '');
+  } catch {
+    el.innerHTML = '<span class="stats-error">—</span>';
+  }
 }
 
 async function refreshData() {
-  document.getElementById('posts-tbody').innerHTML = '<tr><td colspan="7" class="loading"><span class="dot-pulse">Loading</span></td></tr>';
+  document.getElementById('posts-tbody').innerHTML = '<tr><td colspan="8" class="loading"><span class="dot-pulse">Loading</span></td></tr>';
   allPosts = await fetchPosts();
   updateKPIs(allPosts);
   renderCalendar(allPosts);
